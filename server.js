@@ -7,8 +7,13 @@ const app = express();
 const PORT = 3000;
 
 // (Request) Middlewares
+app.use(express.json()); //Parses the req body so we can use it
+
 
 // Routes
+app.get('/', (req, res) => {
+    res.send('Hello from Express')
+})
 
 // Global Error Handling Middleware
 
