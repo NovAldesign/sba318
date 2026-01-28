@@ -1,5 +1,7 @@
 // Imports
 import express, { Router } from "express";
+import db from "./database/database.js";
+import applicantRoutes from "./routes/applicantRoutes.js";
 import { logReq, globalErr } from ".//middleware/middleware.js";
 
 
@@ -13,13 +15,14 @@ app.use(logReq); // Runs for every single request
 
 
 // Routes
-//Post: Create new applicant
+// 1. Home Route
+app.get("/", (req, res) => {
+    // process.cwd() ensures the server finds the folder regardless of where you launch it
+    res.sendFile(process.cwd() + "/public/index.html");
+});
 
-
-
-
-// Read
-
+// 2. API Routes: 
+app.use("/api/applicants", applicantRoutes);
 
 
 // Global Error Handling Middleware
