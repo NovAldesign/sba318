@@ -1,11 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grown Folks Collective</title>
+  </head>
+  <body>
+   <form action="/api/apply" method="POST" class="grown-folks-form">
+    <h2>Grown Folks Collective Intake</h2>
+    <p class="subtitle">Please complete the details below. We will contact you within 72 hours.</p>
+
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number (Format: 000-000-0000)</label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+        <label for="industry">Professional Industry</label>
+        <input type="text" id="industry" name="industry" required>
+    </div>
+
+    <div class="form-group">
+        <label for="tier">Select Membership Tier</label>
+        <select id="tier" name="tier">
+            <option value="bronze">The Essential (Bronze)</option>
+            <option value="silver">The Preferred (Silver)</option>
+            <option value="gold">The Collective First (Gold)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="hopes">What are you hoping to get out of your experience?</label>
+        <textarea id="hopes" name="hopes" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="contribution">What will you bring to the collective if chosen?</label>
+        <textarea id="contribution" name="contribution" rows="4"></textarea>
+    </div>
+
+    <button type="submit">Submit Application</button>
+</form>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 // Imports
-import express from "express";
+import express, { Router } from "express";
 
 
 // Set Ups
@@ -11,6 +11,11 @@ app.use(express.json()); //Parses the req body so we can use it
 
 
 // Routes
+
+
+
+
+// Read
 app.get('/', (req, res) => {
     res.send('Hello from Express')
 })
