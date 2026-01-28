@@ -11,6 +11,7 @@ app.use(express.json()); //Parses the req body so we can use it
 
 
 // Routes
+//Post: Create new applicant
 
 
 
