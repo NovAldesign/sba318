@@ -1,5 +1,6 @@
 // Imports
 import express, { Router } from "express";
+import { logReq, globalErr } from ".//middleware/middleware.js";
 
 
 // Set Ups
@@ -8,6 +9,7 @@ const PORT = 3000;
 
 // (Request) Middlewares
 app.use(express.json()); //Parses the req body so we can use it
+app.use(logReq); // Runs for every single request
 
 
 // Routes
@@ -17,11 +19,11 @@ app.use(express.json()); //Parses the req body so we can use it
 
 
 // Read
-app.get('/', (req, res) => {
-    res.send('Hello from Express')
-})
+
+
 
 // Global Error Handling Middleware
+app.use(globalErr);
 
 // Listener
 app.listen(PORT, () => {
