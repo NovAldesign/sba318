@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grown Folks | Admin Portal</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .admin-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #002147; /* Navy */
+            padding: 40px;
+            border-top: 5px solid #C5A059; /* Gold accent */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            color: #C5A059;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .admin-subtitle {
+            text-align: center;
+            color: #fff;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .applicant-grid {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        /* The styles for the <li> items are located in server.js 
+           app.engine. */
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <h1>Member Intake Review</h1>
+        <p class="admin-subtitle">Confidential Professional Applications</p>
+
+        <ul class="applicant-grid">
+            #list#
+        </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="/" style="color: #C5A059; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; border: 1px solid #C5A059; padding: 10px 20px;">
+                Return to Intake Form
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
